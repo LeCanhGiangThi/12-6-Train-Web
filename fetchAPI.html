@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <button>Get Product</button>
+    <script>
+            const getProduct = async () => {
+                const url='https://dummyapi-0uzr.onrender.com/'
+                console.log('check: ');
+                const btn_getProduct = document.querySelector('button');
+                if (btn_getProduct){
+                    btn_getProduct.addEventListener('click', () => {
+                        console.log(`Event Click`);
+                        fetch(url)
+                        .then(response => response.json())
+                        .then(data => console.log(data))
+                        .catch(err => console.error(err))
+                    })
+                }
+            }
+            document.addEventListener('DOMContentLoaded', getProduct)
+            localStorage.setItem('product', json.stringify(data));
+    </script>
+</body>
+</html>
